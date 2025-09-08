@@ -29,3 +29,6 @@ jobs:
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+
+      - name: 비밀값
+        run: echo ${{ screts.SECRET_TEST }}
