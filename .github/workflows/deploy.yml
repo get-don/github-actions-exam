@@ -24,3 +24,8 @@ jobs:
         run: |
           echo "Good"
           echo "Morning"
+
+      - name: Github Actions 환경 변수
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
