@@ -1,14 +1,26 @@
+# Workflow의 이름
 name: Github Actions Exam
 
+# Event
 on:
   push:
     branches:
       - main
 
+# 하나의 Workflow는 1개 이상의 Job으로 구성
+# 잡들은 병렬적으로 수행
 jobs:
+  # 잡 식별자
   My-Deploy-Job:
+    # 머신 지정
     runs-on: ubuntu-latest
-
+    # 특정 작업을 수행하는 가장 작은 단위
+    # Job은 여러 Setp들로 구성되어 있다.
     steps:
-      - name: Hello World Print
-        run: echo "Hello World!"
+      - name: Hello World Print # Step 식별자
+        run: echo "Hello World!" #실제 명령
+
+      - name: 여러 명령어 작성
+        run: |
+          echo "Good"
+          echo "Morning"
